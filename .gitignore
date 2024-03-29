@@ -1,0 +1,5 @@
+airflow/dags/data/player_stats.parquet
+airflow/dags/data/player_stats.csv
+airflow/logs/
+.google
+.env
