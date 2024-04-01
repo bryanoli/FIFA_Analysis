@@ -1,7 +1,7 @@
-# Fifa Analysis
+# FIFA Analysis
 The purpose of this project is to create a pipeline that ingest the kaggle dataset of players statistics of FIFA 24 and produce a visualization of the best strikers based on attacking attributes such as volleys, finishing, shot_power, etc ...
 
-# TOOLS
+# Tools
 The tools that were used in this project were:
 - Google Cloud: Where the whole project operated
 - Airflow: To orchestrate the ETL operations
