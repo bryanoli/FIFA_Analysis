@@ -103,22 +103,31 @@ normalized_data AS (
   FROM
     cleaned_data
 )
-SELECT DISTINCT
-  player,
+SELECT
   country,
-  club,
-  cleaned_value AS value,
-  (1.0 * normalized_vision + 1.5 * normalized_finishing + 1.0 * normalized_long_shots +
-   1.5 * normalized_shot_power + 1.0 * normalized_curve + 1.0 * normalized_fk_acc +
-   1.0 * normalized_penalties + 1.0 * normalized_volleys + 1.0 * normalized_sprint_speed +
-   1.0 * normalized_acceleration) AS composite_score,
-  cleaned_value / (1.0 * normalized_vision + 1.5 * normalized_finishing + 1.0 * normalized_long_shots +
-           1.5 * normalized_shot_power + 1.0 * normalized_curve + 1.0 * normalized_fk_acc +
-           1.0 * normalized_penalties + 1.0 * normalized_volleys + 1.0 * normalized_sprint_speed +
-           1.0 * normalized_acceleration) AS value_to_performance_ratio
+  AVG(composite_score) AS avg_composite_score,
+  AVG(value_to_performance_ratio) AS avg_value_to_performance_ratio
 FROM
-  normalized_data
-WHERE
-  player NOT LIKE '%�%' -- Filter out entries with encoding errors
+  (
+    SELECT DISTINCT
+      player,
+      country,
+      club,
+      cleaned_value AS value,
+      (1.0 * normalized_vision + 1.5 * normalized_finishing + 1.0 * normalized_long_shots +
+       1.5 * normalized_shot_power + 1.0 * normalized_curve + 1.0 * normalized_fk_acc +
+       1.0 * normalized_penalties + 1.0 * normalized_volleys + 1.0 * normalized_sprint_speed +
+       1.0 * normalized_acceleration) AS composite_score,
+      cleaned_value / (1.0 * normalized_vision + 1.5 * normalized_finishing + 1.0 * normalized_long_shots +
+               1.5 * normalized_shot_power + 1.0 * normalized_curve + 1.0 * normalized_fk_acc +
+               1.0 * normalized_penalties + 1.0 * normalized_volleys + 1.0 * normalized_sprint_speed +
+               1.0 * normalized_acceleration) AS value_to_performance_ratio
+    FROM
+      normalized_data
+    WHERE
+      player NOT LIKE '%�%' -- Filter out entries with encoding errors
+  )
+GROUP BY
+  country
 ORDER BY
-  value_to_performance_ratio DESC;
+  avg_value_to_performance_ratio DESC;
