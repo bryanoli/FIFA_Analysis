@@ -52,3 +52,6 @@ docker-compose up`
 - You would have to run the jupyter notebook python file of `spark_transformation`
 - I could not configure my Airflow to run the spark job.
 
+# Dashboard
+[FIFA 24 REPORT](~/UCL_Analysis/FIFA_24_Report.pdf)
+
