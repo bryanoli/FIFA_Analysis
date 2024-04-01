@@ -27,7 +27,7 @@ dataset_file = "player_stats.csv"
 dataset_url = f"https://www.kaggle.com/datasets/rehandl23/fifa-24-player-stats-dataset?select={dataset_file}"
 AIRFLOW_HOME = os.environ.get("AIRFLOW_HOME", "/opt/airflow/")
 parquet_file = dataset_file.replace('.csv', '.parquet')
-updated_parquet_file = "part-00000-d5a8e06f-8586-4da0-89fa-3ced93bcd153-c000.snappy.parquet"
+updated_parquet_file = "part*.parquet"
 BIGQUERY_DATASET = os.environ.get("BIGQUERY_DATASET", 'ucl_data')
 csv_source = AIRFLOW_HOME+'/kaggle/data'
 
