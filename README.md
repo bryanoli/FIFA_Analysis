@@ -1,4 +1,4 @@
-# PremierLeaguePredictions
+# Fifa Analysis
 The purpose of this project is to create a pipeline that ingest the kaggle dataset of players statistics of FIFA 24 and produce a visualization of the best strikers based on attacking attributes such as volleys, finishing, shot_power, etc ...
 
 # TOOLS
