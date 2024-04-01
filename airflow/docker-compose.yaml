@@ -76,6 +76,7 @@ x-airflow-common:
     # TODO: Please change GCP_PROJECT_ID & GCP_GCS_BUCKET, as per your config
     GCP_PROJECT_ID: premier-predict-417919
     GCP_GCS_BUCKET: ucl-premier-417919-bucket
+    BIGQUERY_DATASET: ucl_data
     KAGGLE_USERNAME: bryanolivares
     KAGGLE_KEY: 040bce2413a32385d70f7c8f60f4fff8
 
