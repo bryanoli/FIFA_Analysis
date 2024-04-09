@@ -22,9 +22,9 @@ The tools used in this project include:
 - Terraform
 - Docker
 
-### Cloud Setup
+### [Cloud Setup](https://www.youtube.com/watch?v=ae-CV2KfoN0&list=PL3MmuxUbc_hJed7dXYoJw8DoCuVHhGEQb&index=13)
 
-In [Google Cloud Platform (GCP)](https://www.youtube.com/watch?v=ae-CV2KfoN0&list=PL3MmuxUbc_hJed7dXYoJw8DoCuVHhGEQb&index=13), create a service account with the following permissions:
+In Google Cloud Platform (GCP), create a service account with the following permissions:
 
 - Storage Admin
 - BigQuery Admin
@@ -46,10 +46,10 @@ Ensure that the following APIs are enabled in your Google Cloud project:
 
 Navigate to the Terraform directory and execute the following commands:
 
-`cd terraform`
-`terraform init`
-`terraform plan`
-`terraform apply`
+`cd terraform`  
+`terraform init`  
+`terraform plan`  
+`terraform apply`  
 
 ### Airflow Setup
 
