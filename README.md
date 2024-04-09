@@ -55,10 +55,10 @@ Navigate to the Terraform directory and execute the following commands:
 
 Set up Airflow with Docker Compose:
 
-`cd airflow`
-`docker-compose build`
-`docker-compose up airflow-init`
-`docker-compose up`
+`cd airflow`  
+`docker-compose build`  
+`docker-compose up airflow-init`  
+`docker-compose up`  
 - Then type `localhost:8080` in your browser and enable the `data_ingestion` dag.
 - These will perform the download task, send the parquet file into the datalake which is the google cloud storage, and create the external tables.
 
