@@ -1,6 +1,6 @@
 # FIFA Analysis
 
-The purpose of this project is to create a pipeline that ingests the Kaggle dataset of player statistics of FIFA 24 and produces a visualization of the best strikers from different countries based on attacking attributes such as volleys, finishing, shot power, etc.
+The purpose of this project is to create a pipeline that ingests the [Kaggle Dataset](https://www.kaggle.com/datasets/rehandl23/fifa-24-player-stats-dataset) of player statistics of FIFA 24 and produces a visualization of the best strikers from different countries based on attacking attributes such as volleys, finishing, shot power, etc.
 
 ## Tools
 
@@ -24,7 +24,7 @@ The tools used in this project include:
 
 ### Cloud Setup
 
-In Google Cloud Platform (GCP), create a service account with the following permissions:
+In [Google Cloud Platform (GCP)](https://www.youtube.com/watch?v=ae-CV2KfoN0&list=PL3MmuxUbc_hJed7dXYoJw8DoCuVHhGEQb&index=13), create a service account with the following permissions:
 
 - Storage Admin
 - BigQuery Admin
@@ -42,7 +42,7 @@ Ensure that the following APIs are enabled in your Google Cloud project:
 - IAM API
 - IAM Service Credentials API
 
-### Terraform Setup
+### [Terraform Setup](https://www.youtube.com/watch?v=Hajwnmj0xfQ&list=PL3MmuxUbc_hJed7dXYoJw8DoCuVHhGEQb&index=13)
 
 Navigate to the Terraform directory and execute the following commands:
 
